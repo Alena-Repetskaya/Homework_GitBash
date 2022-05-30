@@ -1,0 +1,58 @@
+HW_1. The first part
+Linux terminal (GitBash) commands
+
+Нужно уметь делать все пункты задания.
+Куда и в каком виде отправлять задание - скажу позже.
+
+1) Посмотреть где я (pwd)
+2) Создать папку (mkdir foldername)
+3) Зайти в папку (cd foldername)
+4) Создать 3 папки (mkdir foldername1 foldername2 foldername3)
+5) Зайти в любую папку (cd foldername)
+6) Создать 5 файлов (3 txt, 2 json) (touch file1.txt file2.txt file3.txt file4.json file5.json)
+7) Создать 3 папки (mkdir foldername1 foldername2 foldername3 )
+8) Вывести список содержимого папки (ls –la/ls/ls –l)
+9)  Открыть любой txt файл (vim name.file extension)
+10) написать туда что-нибудь, любой текст. (I – insert)
+11) сохранить и выйти.(esc, :wq+enter)
+12) Выйти из папки на уровень выше (cd ..)
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку (mv) 
+
+Чтобы переместить несколько файлов:
+mv /d/testing/homework_GitBash/numb3/{one.json,two.json} /d/testing/homework_GitBash/numb1/ 
+
+команда/путь папки/{перечень файлов через запятую} пробел /путь новой папки/
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку (cp назв.папки/имя файла назв.папки/имя файла)
+cp /d/testing/homework_GitBash/numb3/{one.json,two.json} /d/testing/homework_GitBash/numb1/ 
+
+команда/путь папки/{перечень файлов через запятую} пробел /путь новой папки/
+
+15) Найти файл по имени (find . “__*”)
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+17) вывести несколько первых строк из текстового файла (head -3 filename.file extension)
+18) вывести несколько последних строк из текстового файлa (tail -3 filename.file extension)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+20) вывести дату и время (date)
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+curl "http://162.55.220.72:5005/get_method?name="Alena"&age=30"
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+
+
+
+
+#!/bin/bash
+cd /d/testing/ex_GitBash
+mkdir folder1 folder2 folder3
+cd /d/testing/ex_GitBash/folder1
+touch file1.txt file2.txt file3.txt file4.json file5.json
+mkdir  foldername1 foldername2 foldername3
+ls
+mv /d/testing/ex_GitBash/folder1/{file4.json,file5.json} /d/testing/ex_GitBash/folder2/
